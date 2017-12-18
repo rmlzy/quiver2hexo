@@ -10,7 +10,6 @@ const FROM = '/Users/go_songs/Documents/liuzhiyuan/QuiverData/github.qvnotebook'
 // 模板路径
 const TO = '/Users/go_songs/Documents/liuzhiyuan/blog/yuan-blog/source';
 
-
 function initSource(TO) {
   const post = TO + '/_posts';
   const assets = TO + '/assets';

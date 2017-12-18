@@ -1,0 +1,20 @@
+{
+  "name": "quiver2hexo",
+  "version": "1.0.0",
+  "description": "导出 quiver 笔记到 hexo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node quiver2hexo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuzhiyuan1993/quiver2hexo.git"
+  },
+  "author": "liuzhiyuan1993",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liuzhiyuan1993/quiver2hexo/issues"
+  },
+  "homepage": "https://github.com/liuzhiyuan1993/quiver2hexo#readme"
+}

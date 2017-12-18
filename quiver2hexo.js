@@ -7,9 +7,9 @@ const TurndownService = require('turndown');
 const toMdService = TurndownService();
 
 // 源路径
-const FROM = '/Users/go_songs/Documents/liuzhiyuan/QuiverData/github.qvnotebook';
+let FROM = '';
 // 模板路径
-const TO = '/Users/go_songs/Documents/liuzhiyuan/blog/yuan-blog/source';
+let TO = '/Users/go_songs/Documents/liuzhiyuan/blog/yuan-blog/source';
 
 function initSource(TO) {
   const post = TO + '/_posts';
@@ -99,6 +99,14 @@ function writeRes(path) {
 }
 
 function start() {
+  if (process.argv.length !== 4) {
+    console.log('参数错误, 示例: node quiver2hexo.js quiver_qvnotebook_path hexo_source_path')
+    process.exit(-1);
+  }
+  const args = process.argv.splice(2);
+  FROM = args[0]
+  TO = args[1]
+
   initSource(TO);
 
   ls(FROM).map(function (notePath) {

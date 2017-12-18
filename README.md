@@ -1,8 +1,7 @@
-导出 quiver 笔记到 hexo, 支持导出静态资源;
+导出 quiver 笔记到 hexo, 支持导出静态资源.
 
 脚本依赖:
-+ [Quiver](http://happenapps.com/) - 程序员专用笔记本;
-软件售价: $9.99, 这里分享一个破解版, [Quiver v3.0.5](./assets/Quiver.app.zip).
++ [Quiver](http://happenapps.com/) - 程序员专用笔记本, 售价: $9.99, 这里分享一个破解版: [Quiver v3.0.5](./assets/Quiver.app.zip);
 + [Hexo](https://hexo.io/) - 快速、简洁且高效的博客框架;
 
 ## 如何使用
@@ -29,6 +28,8 @@ node quiver2hexo.js quiver_qvnotebook_path hexo_source_path
 示例脚本: `deploy.sh`, 可以设置 alias 使用更方便.
 
 ## 预览
-
+Quiver 预览:
 ![](./assets/demo1.png)
+
+Hexo 预览:
 ![](./assets/demo2.png)

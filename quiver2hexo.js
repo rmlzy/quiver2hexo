@@ -1,4 +1,5 @@
 const fs = require('fs');
+const moment = require('moment');
 const shell = require('shelljs');
 const rimraf = require('rimraf');
 const TurndownService = require('turndown');
@@ -58,7 +59,7 @@ function readNote(path) {
     uuid: meta.uuid,
     title: meta.title.replace(/:/g, ' ') || '无标题笔记',
     tags: meta.tags,
-    date: meta.created_at,
+    date: moment.unix(meta.created_at).format('YYYY-MM-DD HH:mm:ss'),
     content: ''
   };
 
@@ -81,7 +82,7 @@ function readNote(path) {
 }
 
 function writeMd(note) {
-  const meta = `---\ntitle: ${note.title}\ndate: 2017-12-15 23:19:13\ntags: ${JSON.stringify(note.tags)}\n---\n\n`;
+  const meta = `---\ntitle: ${note.title}\ndate: ${note.date}\ntags: ${JSON.stringify(note.tags)}\n---\n\n`;
   fs.writeFileSync(`${TO}/_posts/${note.uuid}.md`, meta + note.content);
 }
 
@@ -108,4 +109,4 @@ function start() {
   });
 }
 
-start(TO);
+start();

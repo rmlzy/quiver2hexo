@@ -3,13 +3,12 @@ const moment = require('moment');
 const shell = require('shelljs');
 const rimraf = require('rimraf');
 const TurndownService = require('turndown');
-
 const toMdService = TurndownService();
 
-// 源路径
+// qvnotebook 路径
 let FROM = '';
-// 模板路径
-let TO = '/Users/go_songs/Documents/liuzhiyuan/blog/yuan-blog/source';
+// hexo 路径
+let TO = '';
 
 function initSource(TO) {
   const post = TO + '/_posts';

@@ -1,0 +1,100 @@
+/**
+* General
+*/
+
+body {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  width: 70%;
+  margin: 0 auto;
+  line-height: 2.0;
+}
+
+.task-list-item input {
+  height: 3em;
+}
+
+
+/**
+* Layout
+*/
+
+#titlearea {
+  padding: 150px 20px 60px;
+}
+
+#titlearea .title {
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+#contentarea {
+  font-size: 22px;
+  margin: 16px 0;
+}
+
+
+/**
+* Tag
+*/
+
+#tag-field {
+  display: none;
+}
+
+
+/**
+* Cells
+*/
+
+.cell {
+  margin: 5px 0;
+  padding: 5px 0;
+  outline: none;
+  min-height: 18px;
+  /* Note: Setting "overflow: auto" caused scrolling issues. Setting "overflow: scroll" caused scrollbars to show for some users. Leaving it as the default is the best. */
+}
+
+.code-cell, .markdown-cell .ace_static_highlight {
+  font-family: Menlo, Consolas, 'Ubuntu Mono', Monaco, 'source-code-pro', monospace;
+  font-size: 17px;
+}
+
+.latex-cell {
+  white-space: pre-wrap;
+}
+
+
+/**
+* Nav
+*/
+
+.lb-prev, .lb-next {
+  display: block;
+  cursor: default;
+  outline: none;
+  width: 8%;
+  height: 100%;
+  z-index: 10;
+}
+
+.lb-prev {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.lb-next {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.lb-prev:hover {
+  background: rgba(0,0,0,0.02) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAnFBMVEUAAACysrK0tLS2traxsbGysrKzs7OwsLCxsbGysrKzs7O0tLSurq6xsbGysrKsrKytra2srKytra2tra2tra2urq6tra2tra2urq6urq6srKyrq6usrKyrq6urq6urq6urq6urq6urq6urq6urq6urq6uqqqqrq6uqqqqrq6uqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqpqamqqqozLWjsAAAAMnRSTlMABAQEBgYGCAgICAgKCgoqKiwsLjAwMjQ0NkRGSKepq62vsbO1t7m5u7vf5+nr7e/19+ol6KQAAAFJSURBVEjHlZbZdsIwDERTSqF7oXRfKEugpE1Ckf7/3xrZSaSHnmo8J7yNjq+NPHKW/a/L9UuWousd/aRUXBVMdHiF/eOCmIkPb6h/S8TygRXnn9wWYBVnGxae+H0NAT+J4grfE9d/mpMsEAtK33+Rc1DgKW9c/yinVs0K5dT1n6zjZiPPresfrrgTceX7RytSVTPfv+wOv/lVd4CfVdW9718Yntr3Dxak/VD7PIMPw1M/AH7Ds39y/UdzwwP4j+eGZ/8I+C3Ps+9/tzy+vymwQEBBMlLYtFIBm5ZjtVT+sab/caE1lApoDWk+20x+86W3d7hAeuPQCnPlIKo+BBgKgRAzmktAzEiQGSogyPqoZDQqQxhregNhHOJeBcR9O4A6AQMlVnTbQEaWDMWeCRyj421LhA/qIvDAfnk6UNLTQR4nnPQ4+eP58wtvhmv44qAvxgAAAABJRU5ErkJggg==") center center no-repeat;
+}
+
+.lb-next:hover {
+  background: rgba(0,0,0,0.02) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB+UlEQVRo3tWay0oDMRSGu5AiPoqUUkR8AhHftMzVuUvpw7iUIsWVuKwnMmcIh+kkZzbzJ1AcupD/a75kkpOsVjNbmqbPSZLUeZ7fzf0fizUTPo7jnyiKLvT3WFVVOBD0q79Q6F8Tvge40HfHsizxIeiXfzXhTWgOz88GoiiK26UzOsNzcLsHrOcDJIQd3gFgeuJQ1zUOBLm9pmAfY9qMPfcQ7zSwcSCyLLunYJ+uHrA/qBAnl0JiYLfUgzgQNBb+IVwKCZ3apmmgIDbcE1MKCZ1aGtjrpbMPjXTaXNPp2iA3yw4aE3AQXy6FhE6lmdWWzm5DbA2ESyGhU4mm044hphQSOr1BQdCSesc6+X5QIc5KnTIoiF6ns++ygyHoPXGzdHYb4oEhFDolUBCk0yMF+1bqhAmh1Cmilx0OBOk0QCh0irquw4GgnniaoRMmhFKnPQyEDaBQCQMgaIV4EPtqAzWI7WlUMwNBTKNBv8h4KaHUBib8sJhTaIOxmAt6Oc3hfXdkUBsa3lIGuRuTm3rPGhHGpl6WVXw29TBlFS5sKbXBKGxNlRYnKtUYpUVZ3PUpLcIUd+3yumKexyiv8wGH0nmMAw55xORzwAETnps85HNog3XIJyEc6mAes45BSIXgD7q5yasGHD6Iqwbc+LJHr01Ylz1sCITrNn/0Mgso8nrj4AAAAABJRU5ErkJggg==") center center no-repeat;
+}

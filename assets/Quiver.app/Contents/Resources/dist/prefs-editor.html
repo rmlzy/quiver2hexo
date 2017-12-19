@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Prefs Editor</title>
+  <style type="text/css" media="screen">
+    #editor {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      min-height: 100%;
+    }
+  </style>
+</head>
+<body>
+<div id="editor"></div>
+<div style="height: auto; width: auto; top: -100px; left: -100px; visibility: hidden; position: fixed; overflow: visible; white-space: nowrap;opacity: 0 !important;pointer-events: none !important;"></div>
+<script src="vendor/ace/ace.js"></script>
+<script>
+  /* global NativeApp, ace */
+  var editor = ace.edit('editor');
+  editor.setTheme('ace/theme/monokai');
+  editor.getSession().setUseWorker(false);
+  editor.getSession().setUseWrapMode(true);
+  editor.getSession().setUseSoftTabs(true);
+  editor.getSession().setTabSize(2);
+
+  editor.renderer.setShowGutter(false);
+  editor.setOption('maxLines', 10000);
+  editor.setHighlightActiveLine(false);
+  editor.setShowPrintMargin(false);
+  editor.setReadOnly(false);
+
+  editor.commands.removeCommand('showSettingsMenu');
+  editor.commands.removeCommand('findnext');
+  editor.commands.removeCommand('findprevious');
+  editor.commands.removeCommand('selectOrFindNext');
+  editor.commands.removeCommand('selectOrFindPrevious');
+  editor.commands.removeCommand('find');
+
+  editor.on('change', function(e) {
+    NativeApp.applyEditorChange(editor.getValue());
+  });
+
+  window.loadData = function(language, data) {
+    editor.getSession().setMode('ace/mode/' + language);
+    editor.setValue(data, -1);
+    window.scrollTo(0, 0);
+  };
+
+  window.getData = function() {
+    return editor.getValue();
+  };
+</script>
+</body>
+</html>

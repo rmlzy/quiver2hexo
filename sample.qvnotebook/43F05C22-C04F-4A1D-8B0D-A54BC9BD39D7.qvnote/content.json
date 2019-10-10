@@ -1,0 +1,46 @@
+{
+  "title": "混合",
+  "cells": [
+    {
+      "type": "text",
+      "data": "这里<b><i>富文本</i></b><div><br></div><div><a href=\"quiver-file-url/DF342DF292B45AC5CE6A3847061438E3.zip\">fontawesome-free-5.11.2-web.zip</a></div>"
+    },
+    {
+      "type": "markdown",
+      "data": "这是**Markdown**"
+    },
+    {
+      "type": "code",
+      "language": "python",
+      "data": "# 这是代码"
+    },
+    {
+      "type": "diagram",
+      "diagramType": "flow",
+      "data": "st=>start: Start\nop=>operation: Your Operation\ncond=>condition: Yes or No?\ne=>end\n\nst->op->cond\ncond(yes)->e\ncond(no)->op"
+    },
+    {
+      "type": "diagram",
+      "diagramType": "sequence",
+      "data": "Alice->Bob: Hello Bob, how are you?\nNote right of Bob: Bob thinks\nBob-->Alice: I am good thanks!"
+    },
+    {
+      "type": "latex",
+      "language": "latex",
+      "data": "$$E=mc^2$$"
+    },
+    {
+      "type": "text",
+      "data": "<img src=\"quiver-image-url/CBA18C308EE31B0F452C5870D8EEFE3E.jpg\">"
+    },
+    {
+      "type": "text",
+      "data": ""
+    },
+    {
+      "type": "latex",
+      "language": "latex",
+      "data": ""
+    }
+  ]
+}

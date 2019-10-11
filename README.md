@@ -1,6 +1,8 @@
+Write in Quiver, deploy to Hexo blog.
+
 [Quiver](https://github.com/HappenApps/Quiver) is a notebook app for programmers,
 
-[Hexo](https://github.com/hexojs/hexo) is a blog framework,
+[Hexo](https://github.com/hexojs/hexo) is a blog framework base on Nodejs,
 
 The purpose of this repository is to migrate Quiver files to Hexo,
 
@@ -27,3 +29,11 @@ Processing:  |################                | 1/2
 
 Migration success! 👌
 ```
+
+## Preview
+
+[Live Demo](https://rmlzy.github.io/)
+
+![](./assets/quiver.jpg)
+
+![](./assets/blog.jpg)

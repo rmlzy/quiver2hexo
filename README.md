@@ -26,6 +26,6 @@ Migration success! 👌
 
 [Live Demo](https://rmlzy.github.io/)
 
-![](./assets/quiver.jpg)
+![](./assets/preview1.png)
 
-![](./assets/blog.jpg)
+![](./assets/preview2.png)
